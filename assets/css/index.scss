@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "./fonts.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+$body-bg-color: #121214;
+$text-color: #e1e1e6;
+$title-color: #04d361;
+$form-color: #a8a8a8;
+$bg-button-color: #8257e5;
+
+.App {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    font-family: "Spartan";
+    font-size: 14px;
+}
+
+.left-container {
+    z-index: 1;
+    width: 50%;
+    padding: 50px 30px;
+
+    .logo-container img {
+        width: 389px;
+        height: 94px;
+    }
+
+    .news-container {
+        .news-info {
+            margin: 50px 0 50px 0;
+
+            h1 {
+                color: $title-color;
+                font-size: 24px;
+                font-family: "Work Sans", sans-serif;
+            }
+
+            h2 {
+                margin: 9px 0;
+                color: #fff;
+                font-size: 14px;
+            }
+
+            p {
+                color: $text-color;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .news-add {
+        span {
+            color: $form-color;
+            font-weight: 700;
+        }
+
+        span:last-child {
+            color: $bg-button-color;
+        }
+
+        input {
+            width: 798px;
+            height: 48px;
+            border: none;
+            border-left: 5px solid $title-color;
+            background-color: #fff;
+            outline: none;
+            color: $body-bg-color;
+            padding: 15px 17px;
+        }
+
+        input::placeholder {
+            font-family: "Work Sans", sans-serif;
+        }
+
+        div {
+            display: flex;
+            margin: 15px 0 20px 0;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $bg-button-color;
+                border: none;
+                cursor: pointer;
+                min-width: 48px;
+                min-height: 48px;
+            }
+
+            button img {
+                filter: invert(100%) sepia(0%) saturate(7496%)
+                    hue-rotate(110deg) brightness(106%) contrast(100%);
+            }
+        }
+    }
+
+    .see-first {
+        display: flex;
+        align-items: center;
+    }
+
+    .see-first img {
+        filter: invert(63%) sepia(66%) saturate(7280%) hue-rotate(237deg)
+            brightness(92%) contrast(96%);
+    }
+}
+
+.right-container {
+    width: 50%;
+    background-image: url("../img/read_news.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -200px;
+}
